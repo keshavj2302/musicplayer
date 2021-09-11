@@ -113,9 +113,449 @@ header div{
 	/*		Main start 			*/
 
 
+
+	/* 			Main-1 active for breakpoint 800px & below 		*/
+
+
+#main-1{
+	/*display: none;*/
+	/*display: block;*/
+	display: flex;
+	flex-wrap: wrap;
+	height: 90vh;
+	/*border: 2px solid white;*/
+	color: white;
+}
+
+
+
+ 		/* 		Artists and albums section of the page 			*/
+
+
+#Artists_and_Albums{
+	width: 100%;
+	/*border: 2px solid white;*/
+	/*margin-top: 50px;*/
+	display: flex;
+	flex-direction: column;
+	max-height: 90vh;
+	overflow-y: scroll;
+}
+
+
+
+			/* 		Removing scroll Bar Indicaltion 		*/
+
+
+#Artists_and_Albums::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+	
+		/* 			Trending Artists Section Along with Animation on Hover*/
+
+
+
+#Trending_Artists{
+	width: 100%;
+	display: flex;
+	margin-top: 70px;
+	justify-content: space-around;
+	transition: 1s ease-in-out;
+}
+
+#Trending_Artists div{
+	width: 150px;
+	height: 150px;
+	border-radius: 7px;
+	transition: 1s ease-in-out;
+}
+
+
+			/*  		For Decreasing Opacity on non-hovering divs 		*/
+
+#Trending_Artists:hover  div:not(:hover){
+	opacity: 0.5;
+}
+
+
+
+
+			/* 			Change in dimensions on Hovering 		q*/
+
+
+#Trending_Artists div:hover{
+	width: 200px;
+	height: 200px;
+}
+
+#Trending_Artists img{
+	width: 100%;
+	height: 100%;
+	border-radius: 7px;
+}
+
+
+
+				/* 			Latest Release Section 			*/
+
+
+				/* 			Heading  	Latest Release Section 	 */
+
+
+#Latest-release{
+	margin-top: 100px;
+	width: 40%;
+	text-align: center;
+	/*font-size: 30px;*/
+	font-weight: 500;
+}
+
+
+ 			/* 			Latest Release Container for Containing songs inside  (divs)		*/
+
+#latest-release-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	/*border: 2px solid yellow;*/
+}
+
+
+		
+			/* 			Position Relative for lists positioning on target 		*/
+
+
+
+#latest-release-container>div{
+	display: flex;
+	height: 70px;
+	width: 40%;
+	margin-top: 20px;
+	position: relative;
+	justify-content: space-around;
+	/*border: 2px solid white;*/
+}
+
+
+
+				/* 		divs of image and title of latest release 			*/
+
+
+#latest-release-container>div>div{
+	display: flex;
+	width: 80%;
+	/*border: 2px solid white;*/
+	/*position: relative;*/
+	justify-content: space-around;
+}
+
+#latest-release-container>div>div p{
+	/*margin-left: 10px;*/
+	/*border: 2px solid white;*/
+	height: 100%;
+	width: 70%;
+}
+
+#latest-release-container>div>div img{
+	height: 100%;
+	width: 20%;
+	border-radius: 5px;
+}
+
+#latest-release-container>div i{
+	margin-top: 8px;
+}
+
+
+
+			/* 			List to be shown on targeting by the menu bar 			*/
+
+
+
+.music-option{
+	display: none;
+	list-style: none;
+	position: absolute;
+	background-color: black;
+	z-index: 10;
+	transform:translate(60px);
+	padding: 20px;
+	/*height: 200px;
+	width: 200px;*/
+}
+
+
+			/* 		removing the default effect of links*/
+
+
+
+.music-option a{
+	color: white;
+	text-decoration: none;
+}
+
+.music-option:target li:hover{
+	background-color: #004a53;
+}
+
+
+
+				/* 		Pseudo class target to display the popup menu 		*/
+
+
+
+.music-option:target{
+	display: block;
+	list-style: none;
+	position: absolute;
+	background-color: black;
+	z-index: 10;
+	transform:translate(60px);
+	padding: 20px;
+}
+
+
+
+		/*  		Popular Artists Section 		 */
+
+
+#popular-artists{
+	margin-top: 70px;
+	margin-bottom: 50px;
+	width: 40%;
+	text-align: center;
+	/*font-size: 25px;*/
+	font-weight: 500;
+	/*border: 2px solid white;*/
+}
+
+#popular-artists-conatiner{
+	height: 100px;
+	/*border: 2px solid white;*/
+	display: flex;
+	justify-content: space-around;
+}
+
+#popular-artists-conatiner div{
+	text-align: center;
+	height: 100px;
+	width: 100px;
+	/*border: 2px solid white;*/
+}
+
+#popular-artists-conatiner div>img{
+	height: 70%;
+	width: 70px;
+	border-radius: 50%;
+}
+
+
+
+	/*  			Events 						*/
+
+#events{
+	/*height: 200px;*/
+	/*border: 2px solid white;*/
+	display: flex;
+	margin: 70px 0px;
+	justify-content: space-around;
+}
+
+#events div{
+	height: 150px;
+	width: 25%;
+	/*border: 2px solid white;*/
+	border-radius: 10px;
+}
+
+
+#events div img{
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+}
+
+
+#events div p{
+	text-align: center;
+	transform: translateY(-80px);
+	font-size: 25px;
+	font-weight: 700;
+}
+
+
+
+
+
+
+	/* 		Latest Release English 			*/
+
+
+	/* 			Same For Hindi part as well 		*/
+
+
+
+
+#latest-release-english{
+	margin-top: 70px;
+	margin-bottom: 50px;
+	width: 40%;
+	text-align: center;
+	/*font-size: 25px;*/
+	font-weight: 500;
+}
+
+
+
+			/* 		Containing all the divs of song 		*/
+
+
+
+#latest-release-english-container{
+	height: 120px;
+	/*border: 2px solid white;*/
+	display: flex;
+	justify-content: space-around;
+}
+
+
+
+		/* Containing divs for a particular song  		*/
+
+
+
+#latest-release-english-container div{
+	height: 120px;
+	width: 15%;
+	/*border: 2px solid white;*/
+	border-radius: 10px;
+	text-align: center;
+}
+
+#latest-release-english-container div img{
+	height: 80%;
+	width: 80%;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+	/* 		Section - 2 ( Trending_Playlists) 		*/
+
+
+		/*  		Section -2 (Left Section) 			*/
+
+		/* 			Lists of Trending songs 		*/
+
+
+
+#Trending_playlists{
+	width: 100%;
+	/*border: 2px solid white;*/
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+		/*  		Heading of Song Lists 			*/
+
+
+#Playlist_heading{
+	padding-top: 20px;
+	font-size: 20px;
+	font-weight: 500;
+	background-color: #00094f;
+	text-align: center;
+}
+
+#playlist{
+	/*border: 2px solid red;*/
+	display: flex;
+	flex-direction: column;
+	max-height: 90vh;
+	overflow-y:scroll;
+}
+
+
+			/* 		 Used to remove the scroll bar 		*/
+
+
+#playlist::-webkit-scrollbar {
+    display: none;
+}
+
+#playlist>li{
+	margin-top: 30px;
+
+}
+
+
+ 			/* 		Song lists starts from here 			*/
+
+#one{
+	/*border:2px solid white;*/
+}
+
+#one>div{
+	display: flex;
+	justify-content: space-between;
+	/*border:2px solid white;*/
+}
+
+#one div img{
+	/*display: flex;*/
+	height: 40px;
+	width: 40px;
+}
+
+
+
+#song_title{
+	display: flex;
+}
+
+
+#one ul{
+	list-style: none;
+}
+
+.bold{
+	font-weight: 500;
+}
+
+
+ 		/* 		Main - 2 disable 		*/
+
+ 		/* 		Main - 2 will be active for break points 800px and above 		 */
+
+
 #main-2{
 	display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+		/* 				BreakPoint At 800px 			*/
+
 
 
 
@@ -529,6 +969,7 @@ header div{
 	width: 35%;
 	border: 2px solid white;
 	display: flex;
+	margin-top: 0px;
 	flex-direction: column;
 }
 
