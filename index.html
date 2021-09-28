@@ -13,17 +13,23 @@
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="Stylesheet/style.css">
 </head>
 <body>
 
 		<div class = "container-fullwidth">
+
+
+			<!-- Header portion starts  -->
 			<header>
+
+				<!-- Brand Name (Icon) Music player -->
 				<div id = "brand">
 					<a href="#"><img src="images/logo.png"><h2>Music Player</h2></a>
 					
 				</div>
 
+				<!-- List to be shown only if screen (> 800px) -->
 				<div id = "lists">
 					
 					<ul id = "desktop-only-list">
@@ -35,16 +41,25 @@
 					</ul>
 				</div>
 
+
+				<!-- Search bar, notification bell and profile -->
+
 				<div id = "search_and_profile">
 					<i class="fas fa-bell fa-2x"></i>
 
 					<img src="images/keshav.jpeg" alt = "profile">
 				</div>
 
+
+				<!-- Hampsberg icon for toggle -->
+				<!-- For viewport (<= 800px) -->
+
 				<div id = "toggle">
 					<a href = "#toggle-list"><i class="fas fa-bars fa-2x" id = "hampsberg"></i></a>
 				</div>
 			</header>
+
+			<!-- List that need to be shown after clicking toggle link -->
 
 			<ul id = "toggle-list">
 				<a href="#"><li>Featured</li></a>
@@ -62,12 +77,20 @@
 
 
 
+			<!-- Starting of main content  -->
+			<!-- There are two main section main-1 and main -2 -->
+			<!-- Main -1 for screen (<= 800px) -->
+			<!-- main -2 for screen (> 800px) -->
 
 
 			<main id = "main-1">
 
 
 				<section id = "Artists_and_Albums">
+					
+					<!-- This section contains the Artists 
+						images along with the hivering effect -->
+
 					<div id = "Trending_Artists">
 						<div id = "BTS">
 							<img src="images/BTS-1.jpg">
@@ -82,20 +105,39 @@
 						</div>
 					</div>
 
+
+
+
+
+					
+
 					<p id = "Latest-release">Latest Release</p>
 
 						<div id = "latest-release-container">
 							<div>
 								<div>
+
+									<!-- This section contains title and image 
+										of the latest release -->
+
+
 									<img src="images/raabta-MTB.jpg">
 									<p>Main Tera Boyfriend<br>Arijit Singh</p>
 								</div>
-								<a href="#one"><i class="fas fa-ellipsis-v fa-2x"></i>
+
+
+								<!-- This is the menu bar icon clicking on which
+									is going to open a set of lists with id = one-1 -->
+
+								<a href="#one-1"><i class="fas fa-ellipsis-v fa-2x"></i>
 
 
 									
 								</a>
-								<ul class = "music-option" id = "one">
+
+								<!-- This lists initially are hide these lists activated 
+										after clicking on the menu bar -->
+								<ul class = "music-option" id = "one-1">
 										<a href="#"><li>Play</li></a>
 										<a href="#"><li>Add to favourites</li></a>
 										<a href="#"><li>Add to playlist</li></a>
@@ -153,30 +195,40 @@
 
 						<p id = "popular-artists">Popular Artists</p>
 
+
+						<!-- This section consists of several artists
+								and also the link to move to the second
+									HTML page (Artists page) 	 -->
+
 						<div id = "popular-artists-conatiner">
 							<div>
+								<a href="index1.html">
 								<img src="images/arijit.gif">
-								<p>Arijit Singh</p>
+								<p>Arijit Singh</p></a>
 							</div>
 
 							<div>
+								<a href="index1.html">
 								<img src="images/BTS-1.jpg">
-								<p>BTS</p>
+								<p>BTS</p></a>
 							</div>
 
 							<div>
+								<a href="index1.html">
 								<img src="images/marshmello.jfif">
-								<p>Marshmello</p>
+								<p>Marshmello</p></a>
 							</div>
 
 							<div>
+								<a href="index1.html">
 								<img src="images/sanam.jpg">
-								<p>Sanam</p>
+								<p>Sanam</p></a>
 							</div>
 
 							<div>
+								<a href="index1.html">
 								<img src="images/arrahman.jpg">
-								<p>A.R Rahman</p>
+								<p>A.R Rahman</p></a>
 							</div>
 						</div>
 
@@ -185,6 +237,7 @@
 
 
 
+						<!-- Events section that contains party time, Gym time, road trip -->
 
 						<div id = "events">
 							<div>
@@ -211,7 +264,8 @@
 
 
 
-
+						<!-- This sections contain latest release from 
+									English songs -->
 						<p id = "latest-release-english">Latest Release English</p>
 
 
@@ -243,7 +297,10 @@
 
 
 
-
+						<!-- This sections contain latest release from 
+									English songs -->
+						<!-- Same id's are used for applying common styles 
+								from latest-release-english section -->
 						<p id = "latest-release-english">Latest Release Hindi</p>
 
 
@@ -304,107 +361,54 @@
 
 
 				<section id = "Trending_playlists">
+
+					<!-- Heading of trending playlists -->
 					
 						<div id = "Playlist_heading">Top Trending Playlists</div>
 
+						<!-- Lists of songs in trending playlists -->
+
 						<ol id = "playlist">
+
+							<!-- Each lists item contains one song -->
+							<!-- Same styling has been applied to all the list items -->
+							<!-- By the use of same id and classes to all the list items -->
+							<!-- Song no - 1 -->
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/raabta-MTB.jpg">
-										<ul>
-											<li class = "bold">Main Tera Boyfriend</li>
-											<li>Arijit Singh</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/raabta-MTB.jpg"><!-- </a> -->
+
+
+										<!-- <a href="#bottom_music_player"> -->
+											<ul>
+												<li class = "bold">Main Tera Boyfriend</li>
+												<li>Arijit Singh</li>
+											</ul>
+										</a>
 									</div>
 									
-
+									<!-- Heart icons on the right side of list item -->
 									<i class="far fa-heart fa-2x"></i>
 								</div>
 								
 							</li>
 
 
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/cheap-thrills.jpg">
-										<ul>
-											<li class = "bold">Cheap Thrills</li>
-											<li>Sia</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
-
-
+							<!-- song no - 2 -->
 
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/lmlu.jpg">
-										<ul>
-											<li class = "bold">Let me love you</li>
-											<li>Justin Beiber</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
+										<a href="#bottom_music_player"><img src="images/cheap-thrills.jpg"><!-- </a> -->
 
 
-
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/friends.jpg">
-										<ul>
-											<li class = "bold">Friends</li>
-											<li>Annie - marie</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
-
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/qismat.jpg">
-										<ul>
-											<li class = "bold">Qismat</li>
-											<li>Jaani</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
-
-
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/WTH.jpg">
-										<ul>
-											<li class = "bold">Wajah Tum Ho</li>
-											<li>Zeeshan</li>
-										</ul>
+										<!-- <a href="#bottom_music_player"> -->
+											<ul>
+												<li class = "bold">Cheap Thrills</li>
+												<li>Sia</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -416,14 +420,38 @@
 
 
 
+							<!-- song no - 3 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/filhaal.jpg">
-										<ul>
-											<li class = "bold">Filhaal 2</li>
-											<li>B Praak</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/lmlu.jpg">
+
+											<ul>
+												<li class = "bold">Let me love you</li>
+												<li>Justin Beiber</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+							<!-- song no - 4 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/friends.jpg">
+
+											<ul>
+												<li class = "bold">Friends</li>
+												<li>Annie - marie</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -434,14 +462,98 @@
 
 
 
+							<!-- song no - 5 -->
+
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/dilbar.jpg">
-										<ul>
-											<li class = "bold">Dilbar</li>
-											<li>Neha Kakkar</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/qismat.jpg">
+
+											<ul>
+												<li class = "bold">Qismat</li>
+												<li>Jaani</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+
+							
+
+
+
+
+
+							
+
+							<!-- song no - 6 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/WTH.jpg">
+
+											<ul>
+												<li class = "bold">Wajah Tum Ho</li>
+												<li>Zeeshan</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+
+							
+
+
+
+
+							<!-- song no - 7 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/filhaal.jpg">
+
+											<ul>
+												<li class = "bold">Filhaal 2</li>
+												<li>B Praak</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+
+							
+
+
+
+							<!-- song no - 8 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/dilbar.jpg">
+											<ul>
+												<li class = "bold">Dilbar</li>
+												<li>Neha Kakkar</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -452,14 +564,69 @@
 
 
 
+
+
+
+
+							<!-- song no - 9 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/fake_love.jpg">
-										<ul>
-											<li class = "bold">Fake Love</li>
-											<li>BTS</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/fake_love.jpg">
+
+											<ul>
+												<li class = "bold">Fake Love</li>
+												<li>BTS</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+
+
+							<!-- song no - 10 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/tum_hi_ho.jfif">
+
+											<ul>
+												<li class = "bold">Tum hi ho</li>
+												<li>Arijit Singh</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+					
+
+
+
+
+							<!-- song no - 11 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/GFBF.jpg">
+
+											<ul>
+												<li class = "bold">GF BF</li>
+												<li>Jacqueline</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -471,50 +638,20 @@
 
 
 
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/tum_hi_ho.jfif">
-										<ul>
-											<li class = "bold">Tum hi ho</li>
-											<li>Arijit Singh</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
 
 
+							<!-- song no - 12 -->
 
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/GFBF.jpg">
-										<ul>
-											<li class = "bold">GF BF</li>
-											<li>Jacqueline</li>
-										</ul>
-									</div>
-									
+										<a href="#bottom_music_player"><img src="images/baarish.jpg">
 
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
-
-
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/baarish.jpg">
-										<ul>
-											<li class = "bold">Baarish</li>
-											<li>Yaariyan</li>
-										</ul>
+											<ul>
+												<li class = "bold">Baarish</li>
+												<li>Yaariyan</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -526,14 +663,21 @@
 
 
 
+
+
+
+							<!-- song no - 13 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/gulabi_aankhen.jfif">
-										<ul>
-											<li class = "bold">Gulabi Aankhein</li>
-											<li>Sanam</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/gulabi_aankhen.jfif">
+
+											<ul>
+												<li class = "bold">Gulabi Aankhein</li>
+												<li>Sanam</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -545,14 +689,18 @@
 
 
 
+							<!-- song no - 14 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/pal_do_pal.jpg">
-										<ul>
-											<li class = "bold">Pal do pal</li>
-											<li>Mukesh</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/pal_do_pal.jpg">
+
+											<ul>
+												<li class = "bold">Pal do pal</li>
+												<li>Mukesh</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -563,14 +711,19 @@
 
 
 
+
+							<!-- song no - 15 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/feelings.jpg">
-										<ul>
-											<li class = "bold">Feelings</li>
-											<li>Vatsala</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/feelings.jpg">
+
+											<ul>
+												<li class = "bold">Feelings</li>
+												<li>Vatsala</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -578,6 +731,9 @@
 								</div>
 								
 							</li>
+
+
+
 
 
 						</ol>
@@ -585,6 +741,14 @@
 				</section>
 				
 			</main>
+
+
+
+
+
+
+			<!-- Starting of main -2 -->
+			<!-- main -2 is for screen (> 800px) -->
 
 			<main id = "main-2">
 
@@ -595,6 +759,10 @@
 
 				
 				<section id = "Artists_and_Albums">
+
+					<!-- This section contains three divs along with
+						change in dimensions on hovering -->
+
 					<div id = "Trending_Artists">
 						<div id = "BTS">
 							<img src="images/BTS-1.jpg">
@@ -609,20 +777,37 @@
 						</div>
 					</div>
 
+
+					<!-- Heading of latest release -->
+
 					<p id = "Latest-release">Latest Release</p>
+
+
+
 
 						<div id = "latest-release-container">
 							<div>
+
+								<!-- Section containing image and title -->
+
 								<div>
 									<img src="images/raabta-MTB.jpg">
 									<p>Main Tera Boyfriend<br>Arijit Singh</p>
 								</div>
-								<a href="#one"><i class="fas fa-ellipsis-v fa-2x"></i>
 
+								<!-- icon for menu bar -->
 
-									
+								<a href="#five"><i class="fas fa-ellipsis-v fa-2x"></i>
 								</a>
-								<ul class = "music-option" id = "one">
+
+
+								<!-- List that need to be visible only after targeting -->
+								<!-- initially the display of this list is none -->
+
+								<!-- list will be visible only after clicking 
+									on the above menu bar -->
+
+								<ul class = "music-option" id = "five">
 										<a href="#"><li>Play</li></a>
 										<a href="#"><li>Add to favourites</li></a>
 										<a href="#"><li>Add to playlist</li></a>
@@ -636,8 +821,8 @@
 									<img src="images/friends.jpg">
 									<p>Friends<br>Annie-marie</p>
 								</div>
-								<a href="#two"><i class="fas fa-ellipsis-v fa-2x"></i></a>
-								<ul class = "music-option" id = "two">
+								<a href="#six"><i class="fas fa-ellipsis-v fa-2x"></i></a>
+								<ul class = "music-option" id = "six">
 										<a href="#"><li>Play</li></a>
 										<a href="#"><li>Add to favourites</li></a>
 										<a href="#"><li>Add to playlist</li></a>
@@ -651,8 +836,8 @@
 									<img src="images/lmlu.jpg">
 									<p>Let Me Love You<br>Justin Beiber</p>
 								</div>
-								<a href="#three"><i class="fas fa-ellipsis-v fa-2x"></i></a>
-								<ul class = "music-option" id = "three">
+								<a href="#seven"><i class="fas fa-ellipsis-v fa-2x"></i></a>
+								<ul class = "music-option" id = "seven">
 										<a href="#"><li>Play</li></a>
 										<a href="#"><li>Add to favourites</li></a>
 										<a href="#"><li>Add to playlist</li></a>
@@ -666,8 +851,8 @@
 									<img src="images/dilbar.jpg">
 									<p>Dilbar<br>Neha Kakkar</p>
 								</div>
-								<a href="#four"><i class="fas fa-ellipsis-v fa-2x"></i></a>
-								<ul class = "music-option" id = "four">
+								<a href="#eight"><i class="fas fa-ellipsis-v fa-2x"></i></a>
+								<ul class = "music-option" id = "eight">
 										<a href="#"><li>Play</li></a>
 										<a href="#"><li>Add to favourites</li></a>
 										<a href="#"><li>Add to playlist</li></a>
@@ -677,32 +862,37 @@
 							</div>
 						</div>
 
+						<!-- This section contains the images and name of some
+							popular artists -->
+						<!-- They are also the links to the second page of the 
+							music player -->
+
 
 						<p id = "popular-artists">Popular Artists</p>
 
 						<div id = "popular-artists-conatiner">
 							<div>
-								<img src="images/arijit.gif">
+								<a href="index1.html"><img src="images/arijit.gif"></a>
 								<p>Arijit Singh</p>
 							</div>
 
 							<div>
-								<img src="images/BTS-1.jpg">
+								<a href="index1.html"><img src="images/BTS-1.jpg"></a>
 								<p>BTS</p>
 							</div>
 
 							<div>
-								<img src="images/marshmello.jfif">
+								<a href="index1.html"><img src="images/marshmello.jfif"></a>
 								<p>Marshmello</p>
 							</div>
 
 							<div>
-								<img src="images/sanam.jpg">
+								<a href="index1.html"><img src="images/sanam.jpg"></a>
 								<p>Sanam</p>
 							</div>
 
 							<div>
-								<img src="images/arrahman.jpg">
+								<a href="index1.html"><img src="images/arrahman.jpg"></a>
 								<p>A.R Rahman</p>
 							</div>
 						</div>
@@ -711,7 +901,7 @@
 
 
 
-
+						<!-- Events section -->
 
 						<div id = "events">
 							<div>
@@ -737,7 +927,9 @@
 
 
 
-
+						<!-- Latest release english section -->
+						<!-- This section contains the images of the song and their title -->
+						<!-- The same styling is done for latest release hindi section -->
 
 						<p id = "latest-release-english">Latest Release English</p>
 
@@ -745,23 +937,23 @@
 						<div id = "latest-release-english-container">
 
 							<div>
-								<img src="images/friends.jpg">
+								<a href="#bottom_music_player"><img src="images/friends.jpg"></a>
 								<p>Friends</p>
 							</div>
 
 
 							<div>
-								<img src="images/cheap-thrills.jpg">
+								<a href="#bottom_music_player"><img src="images/cheap-thrills.jpg"></a>
 								<p>Cheap Thrills</p>
 							</div>
 
 							<div>
-								<img src="images/fake_love.jpg">
+								<a href="#bottom_music_player"><img src="images/fake_love.jpg"></a>
 								<p>Fake Love</p>
 							</div>
 
 							<div>
-								<img src="images/lmlu.jpg">
+								<a href="#bottom_music_player"><img src="images/lmlu.jpg"></a>
 								<p>Let me love you</p>
 							</div>
 
@@ -769,7 +961,9 @@
 
 
 
-
+						<!-- Latest release hindi section  -->
+						<!-- This section is same as that of the latest release english -->
+						<!-- All styling will remain same -->
 
 						<p id = "latest-release-english">Latest Release Hindi</p>
 
@@ -777,49 +971,27 @@
 						<div id = "latest-release-english-container">
 
 							<div>
-								<img src="images/filhaal.jpg">
+								<a href="#bottom_music_player"><img src="images/filhaal.jpg"></a>
 								<p>Filhaal 2</p>
 							</div>
 
 
 							<div>
-								<img src="images/WTH.jpg">
+								<a href="#bottom_music_player"><img src="images/WTH.jpg"></a>
 								<p>Wajah Tum Ho</p>
 							</div>
 
 							<div>
-								<img src="images/raabta-MTB.jpg">
+								<a href="#bottom_music_player"><img src="images/raabta-MTB.jpg"></a>
 								<p>Main Tera Boyfriend</p>
 							</div>
 
 							<div>
-								<img src="images/dilbar.jpg">
+								<a href="#bottom_music_player"><img src="images/dilbar.jpg"></a>
 								<p>Dilbar</p>
 							</div>
 
 						</div>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 				</section>
 
@@ -827,22 +999,33 @@
 
 
 				<!-- 			Tranding-Playlist (Section - 2) 		 -->
-
+				<!-- Section that contains lists of song  -->
 
 
 				<section id = "Trending_playlists">
 					
 						<div id = "Playlist_heading">Top Trending Playlists</div>
 
+
+						<!-- Lists of songs starts here -->
+
 						<ol id = "playlist">
+
+							<!-- Same styling is provided to all the lists of song -->
+
+							<!-- Song no -1 -->
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/raabta-MTB.jpg">
-										<ul>
-											<li class = "bold">Main Tera Boyfriend</li>
-											<li>Arijit Singh</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/raabta-MTB.jpg"><!-- </a> -->
+
+
+										<!-- <a href="#bottom_music_player"> -->
+											<ul>
+												<li class = "bold">Main Tera Boyfriend</li>
+												<li>Arijit Singh</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -852,86 +1035,19 @@
 							</li>
 
 
+							<!-- Song no -2 -->
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/cheap-thrills.jpg">
-										<ul>
-											<li class = "bold">Cheap Thrills</li>
-											<li>Sia</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
+										<a href="#bottom_music_player"><img src="images/cheap-thrills.jpg"><!-- </a> -->
 
 
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/lmlu.jpg">
-										<ul>
-											<li class = "bold">Let me love you</li>
-											<li>Justin Beiber</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
-
-
-
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/friends.jpg">
-										<ul>
-											<li class = "bold">Friends</li>
-											<li>Annie - marie</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
-
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/qismat.jpg">
-										<ul>
-											<li class = "bold">Qismat</li>
-											<li>Jaani</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
-
-
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/WTH.jpg">
-										<ul>
-											<li class = "bold">Wajah Tum Ho</li>
-											<li>Zeeshan</li>
-										</ul>
+										<!-- <a href="#bottom_music_player"> -->
+											<ul>
+												<li class = "bold">Cheap Thrills</li>
+												<li>Sia</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -943,14 +1059,17 @@
 
 
 
+							<!-- Song no -3 -->
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/filhaal.jpg">
-										<ul>
-											<li class = "bold">Filhaal 2</li>
-											<li>B Praak</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/lmlu.jpg">
+
+											<ul>
+												<li class = "bold">Let me love you</li>
+												<li>Justin Beiber</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -960,33 +1079,18 @@
 							</li>
 
 
+							<!-- Song no -4 -->
 
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/dilbar.jpg">
-										<ul>
-											<li class = "bold">Dilbar</li>
-											<li>Neha Kakkar</li>
-										</ul>
-									</div>
-									
+										<a href="#bottom_music_player"><img src="images/friends.jpg">
 
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
-
-
-
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/fake_love.jpg">
-										<ul>
-											<li class = "bold">Fake Love</li>
-											<li>BTS</li>
-										</ul>
+											<ul>
+												<li class = "bold">Friends</li>
+												<li>Annie - marie</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -998,14 +1102,84 @@
 
 
 
+							<!-- Song no -5 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/tum_hi_ho.jfif">
-										<ul>
-											<li class = "bold">Tum hi ho</li>
-											<li>Arijit Singh</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/qismat.jpg">
+
+											<ul>
+												<li class = "bold">Qismat</li>
+												<li>Jaani</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+
+							<!-- Song no -6 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/WTH.jpg">
+
+											<ul>
+												<li class = "bold">Wajah Tum Ho</li>
+												<li>Zeeshan</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+
+							
+
+							<!-- Song no -7 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/filhaal.jpg">
+
+											<ul>
+												<li class = "bold">Filhaal 2</li>
+												<li>B Praak</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+
+							
+
+							<!-- Song no -8 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/dilbar.jpg">
+											<ul>
+												<li class = "bold">Dilbar</li>
+												<li>Neha Kakkar</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -1016,32 +1190,20 @@
 
 
 
-							<li id = "one">
-								<div>
-									<div id = "song_title">
-										<img src="images/GFBF.jpg">
-										<ul>
-											<li class = "bold">GF BF</li>
-											<li>Jacqueline</li>
-										</ul>
-									</div>
-									
-
-									<i class="far fa-heart fa-2x"></i>
-								</div>
-								
-							</li>
 
 
+							<!-- Song no -9 -->
 
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/baarish.jpg">
-										<ul>
-											<li class = "bold">Baarish</li>
-											<li>Yaariyan</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/fake_love.jpg">
+
+											<ul>
+												<li class = "bold">Fake Love</li>
+												<li>BTS</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -1053,14 +1215,42 @@
 
 
 
+							<!-- Song no -10 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/gulabi_aankhen.jfif">
-										<ul>
-											<li class = "bold">Gulabi Aankhein</li>
-											<li>Sanam</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/tum_hi_ho.jfif">
+
+											<ul>
+												<li class = "bold">Tum hi ho</li>
+												<li>Arijit Singh</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+					
+
+
+
+							<!-- Song no -11 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/GFBF.jpg">
+
+											<ul>
+												<li class = "bold">GF BF</li>
+												<li>Jacqueline</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -1072,14 +1262,20 @@
 
 
 
+
+
+							<!-- Song no -12 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/pal_do_pal.jpg">
-										<ul>
-											<li class = "bold">Pal do pal</li>
-											<li>Mukesh</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/baarish.jpg">
+
+											<ul>
+												<li class = "bold">Baarish</li>
+												<li>Yaariyan</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -1090,14 +1286,20 @@
 
 
 
+
+
+							<!-- Song no -13 -->
+
 							<li id = "one">
 								<div>
 									<div id = "song_title">
-										<img src="images/feelings.jpg">
-										<ul>
-											<li class = "bold">Feelings</li>
-											<li>Vatsala</li>
-										</ul>
+										<a href="#bottom_music_player"><img src="images/gulabi_aankhen.jfif">
+
+											<ul>
+												<li class = "bold">Gulabi Aankhein</li>
+												<li>Sanam</li>
+											</ul>
+										</a>
 									</div>
 									
 
@@ -1107,13 +1309,83 @@
 							</li>
 
 
+
+
+
+							<!-- Song no -14 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/pal_do_pal.jpg">
+
+											<ul>
+												<li class = "bold">Pal do pal</li>
+												<li>Mukesh</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
+
+
+
+
+							<!-- Song no -15 -->
+
+							<li id = "one">
+								<div>
+									<div id = "song_title">
+										<a href="#bottom_music_player"><img src="images/feelings.jpg">
+
+											<ul>
+												<li class = "bold">Feelings</li>
+												<li>Vatsala</li>
+											</ul>
+										</a>
+									</div>
+									
+
+									<i class="far fa-heart fa-2x"></i>
+								</div>
+								
+							</li>
 						</ol>
 					
 				</section>
 			</main>
 
 			<footer>
-				
+
+				<!-- Bottom music player -->
+				<!-- Initially the bottom music player will remain hidden -->
+				<!-- Whenever we click on any song or play button 
+					then this music player becomes visible -->
+					
+				<div id = "bottom_music_player">
+				<div id = "button_and_name">
+					<div id = "name">
+						<img src="images/arijit.gif">
+						<p>Main tera boyfriend</p>
+					</div>
+
+					<div id = "controls">
+						<a href="#Trending_playlists"><i class="fas fa-backward fa-2x"></i></a>
+						<a href="#Trending_playlists"><i class="far fa-pause-circle fa-2x"></i></a>
+						<a href="#Trending_playlists"><i class="fas fa-forward fa-2x"></i></a>
+					</div>
+				</div>
+
+
+				<div id = "progress">
+					<div></div>
+					<i class="fas fa-circle"></i>
+				</div>
+			</div>
 			</footer>
 		</div>
 

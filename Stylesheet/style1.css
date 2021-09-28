@@ -1,0 +1,960 @@
+body{
+	margin: 0;
+	padding: 0;
+	/*background-color: #00142f;*/
+	background-image:linear-gradient(to bottom right, #24004f, #54005c 125%);
+	color: white;
+}
+
+/* 		Start of header Section 			*/
+/* 		For viewport less than 800px 	 */
+			
+
+header{
+	height: 60px;
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	background-color: #e44bb9;
+	/*border: 2px solid red;*/
+}
+
+header div{
+	height: 60px;
+	/*border: 2px solid black;*/
+}
+
+
+/* 		Brand is the company 
+		name music player in this case */
+
+#brand{
+	width: 80%;
+	display: flex;
+	padding-top: 5px;
+}
+
+#brand img{
+	height: 48px;
+	width: 48px;
+	margin-left: 10px;
+}
+
+#brand h2{
+	margin-left: 4px;
+}
+
+#brand a{
+	width: 100%;
+	display: flex;
+	color: black;
+	text-decoration: none;
+}
+
+
+/* 	List containing features and trending
+	display as none for devices < 800px */
+
+#lists{
+	display: none;
+}
+
+#search_and_profile{
+	display: none;
+}
+
+
+/* 			Toggle = Hampsberg icon 	 */
+
+#toggle{
+	width: 20%;
+
+}
+
+
+/* 			For making hampsberg icon a link 	 */
+
+#toggle a{
+	display: block;
+	text-decoration: none;
+	min-height: 100%;
+	width: 100%;
+	padding-top: 10px;
+	padding-left: 5px;
+}
+
+
+/* 			List that need to be displayed
+			 on clicking Hampsberg icon	 */
+/* 			For viewport less than 800px 		 */
+
+#toggle-list{
+	display: none;
+	padding: 0px;
+	list-style: none;
+	text-align: center;
+	background-color: #0091ff;
+}
+
+
+
+
+/* 			Displaying list on clicking
+ 			the hampsberg icon 		 */
+/* 			Only for viewport less than 800px 			 */
+
+
+
+#toggle-list:target{
+	display:block;
+	position: absolute;
+	top: 60px;
+	/*left: 60px;*/
+	width: 100%;
+	z-index: 10;
+}
+
+
+/* Removing the default
+	 styling of the anchor tag  */
+
+#toggle-list a{
+	color: black;
+	text-decoration: none;
+}
+
+#toggle-list li{
+	/*list-style: no*/
+	font-weight: 500;
+	margin-top: 5px;
+}
+
+
+/*  	psedo class for the list 	 */
+#toggle-list li:hover{
+	background-color: #3260d1;
+}
+
+
+
+/* 			Main - part starts 			*/
+/* 		main has two section main -1 and main -2 */
+
+
+main{
+	display: flex;
+	flex-wrap: wrap;
+	height: 91vh;
+	/*border: 2px solid white;*/
+}
+
+
+
+
+/* 		main-1 		*/
+/* 		First section of the main 	 */
+
+
+#main-1{
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+
+/* 		Artists  Description 		*/
+
+
+
+#Artist_description{
+	margin-top: 10px;
+	height: 40%;
+	width: 95%;
+	margin: auto;
+	display: flex;
+	box-shadow: 0 0 10px 0.5px white;
+	padding: 5px;
+	overflow-y: scroll;
+}
+
+
+/* 		To remove scroll bar 	 */
+
+#Artist_description::-webkit-scrollbar{
+	display: none;
+}
+
+
+/* 		Setting dimensions of image 	 */
+
+#Artist_description>img{
+	width: 30%;
+}
+
+
+
+/* 		Setting up about section 	 */
+
+#Artist_description>div{
+	padding: 10px;
+}
+
+
+#About_section>div{
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+
+/* 		Button to play and follow
+		in Artist description  	*/
+
+
+#About_section>div button{
+	background-color: #009d9d;
+	color: white;
+
+}
+
+
+
+
+/* 			Artists  Playlists 			*/
+/* 		Songs below the Artist description 	 */
+
+
+
+#Artist_playlist{
+	height: 56%;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+
+
+#Artist_playlist::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* 		For Styling of each song bar 
+		in Artist Playlist */
+
+
+/* 		We are using this styling
+		to all the songs in 
+		Artists_playlists  */
+
+
+.song_bar{
+	width: 90%;
+	height: 80px;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-around;
+	background-image: linear-gradient(to bottom right, #af00ff, #4f00ff 120%);
+	border-radius: 10px 10px 10px 10px;
+}
+
+
+
+/* 		Flex property to both
+		 title_bar & Play_shuffle button */
+
+.song_bar>div{
+	display: flex;
+
+}
+
+
+.title_bar{
+	width: 55%;
+	padding: 10px;
+	align-items: center;
+}
+
+
+/* 		Dimensions of image in song bar */
+
+.title_bar>img{
+	height: 70px;
+	width: 70px;
+	margin-left: 20px;
+	border-radius: 50%;
+}
+
+
+.title_bar>p{
+	margin-left: 20px;
+}
+
+
+/* 		Styling of buttons in song_bar 	 */
+
+.play_shuffle{
+	width: 30%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.play_shuffle button{
+	height: 50%;
+	background-color: #009d9d;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+/* 		main-2 		*/
+/* 		Second section of main part 	 */
+/* 		Viewport < 800px 	 */
+
+#main-2{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 10px;
+}
+
+
+
+/* 		Styling to the 
+		title Similar Artists */
+
+.change_font{
+	font-weight: 500;
+	font-size: 25px;
+	text-align: center;
+	width: 100%;
+}
+
+
+/* 		Styling of each song
+		 created in similar Artist */
+
+/* 		The same styling will be used 
+		to each and every song in the list */
+.list_song{
+	display: flex;
+	height: 100%;
+	background-image: linear-gradient(to bottom right, #af00ff, #4f00ff 120%);
+	border-radius: 10px;
+	margin-top: 20px;
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+/* 		Adding scroll property 
+		to list of songs */
+
+.similar_artist{
+	overflow-y: scroll;
+	height: 80vh;
+}
+
+
+
+.similar_artist::-webkit-scrollbar{
+	display: none;
+}
+
+
+.similar_artist>li{
+	height: 70px;
+}
+
+
+.list_song>div{
+	display: flex;
+	height:  100%;
+	width:  80%;
+	align-items: center;
+}
+
+
+/* 		Setting dimensions of images in lists */
+
+.list_song>div>img{
+	height: 80%;
+	width: 60px;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+
+
+.list_song>div>p{
+	margin-left: 20px;
+}
+
+.list_song a{
+	width: 10%;
+	color: white;
+}
+
+
+
+
+
+
+/* 			Bottom Music Player 		 */
+/* 		Initially it's display has set to none  */
+/* 		Display changes to flex on targeting */
+
+#bottom_music_player{
+	display: none;
+	flex-wrap: wrap;
+	position: fixed;
+	bottom: 0;
+	justify-content: center;
+	background-image: linear-gradient(to right bottom, #5b5d64, #416463 100%);
+	width: 100%;
+	height: 150px;
+	padding: 15px;
+	overflow-y: scroll;
+}
+
+
+#bottom_music_player:target{
+	display: flex;
+}
+
+#bottom_music_player>div{
+	width: 90%;
+	display: flex;
+}
+
+
+#button_and_name{
+	/*border: 2px solid white;*/
+}
+
+#button_and_name>div{
+	width: 45%;
+}
+
+#name{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+/* 		setting the dimensions of images 	 */
+
+#name>img{
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+}
+
+#name>p{
+	width: 70%;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+
+/* 	This Contains control buttons
+	like prev, next, play/pause */
+
+#controls{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#controls>a{
+	color: white;
+	text-decoration: none;
+}
+
+
+#controls>a:hover{
+	color: #00b4ff;
+}
+
+
+/* 		This is to set 
+		the progress bar of song */
+
+#progress{
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 25px;
+	background-color: lightgray;
+	max-height: 10px;
+}
+
+
+#progress>div{
+	width: 50%;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	max-height: 10px;
+	background-color: #00ff2f;
+}
+
+#progress>i{
+	transform: translate(-1px, -1px);
+	z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+/* 				Desktop Version 				*/
+/* 		For viewport above 800px    */
+
+
+@media screen and (min-width: 800px){
+
+
+
+
+/* 	Header section of the page */
+
+/* 		Brand is the company 
+		name music player in this case */
+	#brand{
+		width: 30%;
+	}
+
+	#lists{
+		display: block;
+		width: 55%;
+	}
+
+
+
+
+	#search_and_profile{
+		display: flex;
+		width: 15%;
+		justify-content: space-around;
+		padding-top: 5px;
+	}
+
+
+/* 			Toggle = Hampsberg icon 	 */
+/* 		We didn't want hampsberg icon now  */
+/* 		So display = none */
+	#toggle{
+		display: none;
+	}
+
+
+/* 		List to be shown to user if
+	viewport is greater than 800px */
+
+	#desktop-only-list{
+		display: flex;
+		list-style: none;
+		padding: 0;
+		justify-content: space-around;
+	}
+
+	#desktop-only-list a{
+		color: black;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 22px;
+		height: 60px;
+
+	}
+
+	/* 	pseudo class to changing the desktop list on hovering */
+
+
+	#desktop-only-list a:hover{
+		background-color: #e71ca6;
+		border-bottom: 6px solid #00ff18;
+	}
+
+	#desktop-only-list li{
+		padding-top: 10px;
+	}
+
+	#search_and_profile img{
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+	}
+
+
+	#desktop-only-list input{
+		border-radius: 4px;
+	}
+
+
+
+
+	/* 		main part 		*/
+
+
+main{
+	display: flex;
+	flex-wrap: nowrap;
+
+	height: 91vh;
+}
+
+
+main>section{
+	/*border: 2px solid white;*/
+}
+
+
+
+
+
+	/* 		main - 1  		*/
+
+
+#main-1{
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+
+#main-1>div{
+	/*border: 2px solid cyan;*/
+}
+
+ 		/* 		Artists  Description 		*/
+
+
+
+#Artist_description{
+	margin-top: 10px;
+	height: 40%;
+	width: 100%;
+	display: flex;
+	box-shadow: 0 0 10px 0.5px white;
+	padding: 5px;
+	overflow-y: scroll;
+}
+
+
+
+#Artist_description::-webkit-scrollbar{
+	display: none;
+}
+
+
+
+#Artist_description>img{
+	width: 30%;
+}
+
+#Artist_description>div{
+	padding: 10px;
+}
+
+
+#About_section>div{
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+#About_section>div button{
+	background-color: #009d9d;
+	color: white;
+
+}
+
+
+
+		/* 			Artists  Playlists 			*/
+
+
+
+#Artist_playlist{
+	height: 56%;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+
+
+#Artist_playlist::-webkit-scrollbar {
+    display: none;
+}
+
+.song_bar{
+	width: 90%;
+	height: 80px;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-around;
+	background-image: linear-gradient(to bottom right, #af00ff, #4f00ff 120%);
+	border-radius: 10px 10px 10px 10px;
+}
+
+.song_bar>div{
+	display: flex;
+
+}
+
+.title_bar{
+	width: 55%;
+	padding: 10px;
+	align-items: center;
+}
+
+.title_bar>img{
+	height: 70px;
+	width: 70px;
+	margin-left: 20px;
+	border-radius: 50%;
+}
+
+
+.title_bar>p{
+	margin-left: 20px;
+}
+
+.play_shuffle{
+	width: 30%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.play_shuffle button{
+	height: 50%;
+	background-color: #009d9d;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+		/* 		main-2 		*/
+
+
+#main-2{
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 10px;
+
+}
+
+.change_font{
+	font-weight: 500;
+	font-size: 25px;
+	text-align: center;
+	width: 100%;
+}
+
+
+/* 	Represents the div of song lists  */
+
+.list_song{
+	display: flex;
+	height: 100%;
+	background-image: linear-gradient(to bottom right, #af00ff, #4f00ff 120%);
+	border-radius: 10px;
+	margin-top: 20px;
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+.similar_artist{
+	overflow-y: scroll;
+	height: 80vh;
+}
+
+
+
+.similar_artist::-webkit-scrollbar{
+	display: none;
+}
+
+
+.similar_artist>li{
+	height: 70px;
+}
+
+
+/* 	Contains the image and title of the songs */
+
+.list_song>div{
+	display: flex;
+	height:  100%;
+	width:  80%;
+	align-items: center;
+}
+
+
+.list_song>div>img{
+	height: 80%;
+	width: 60px;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+
+
+.list_song>div>p{
+	margin-left: 20px;
+}
+
+.list_song a{
+	width: 10%;
+	color: white;
+}
+
+
+
+
+
+
+
+/*	 		Bottom Music Player 			*/
+
+/* 	Initially this bottom music player will be
+	hidden but whenever we clicks the play button or 
+	at the image of the songs this bottom music player pops up */
+
+
+#bottom_music_player{
+	display: none;
+	flex-wrap: wrap;
+	position: fixed;
+	bottom: 0;
+	justify-content: center;
+	background-image: linear-gradient(to right bottom, #5b5d64, #416463 100%);
+	width: 100%;
+	height: 150px;
+	padding: 15px;
+	overflow-y: scroll;
+}
+
+
+/* 	Show the bottom music player on target */
+
+#bottom_music_player:target{
+	display: flex;
+}
+
+#bottom_music_player>div{
+	width: 90%;
+	display: flex;
+}
+
+
+#button_and_name{
+	/*border: 2px solid white;*/
+}
+
+#button_and_name>div{
+	width: 45%;
+}
+
+
+/* 	This sections contains the 
+	name and title of the song 
+	in bottom music player */
+
+#name{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#name>img{
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+}
+
+#name>p{
+	width: 70%;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+
+/*  Conatins the three icon links namely */
+/*  Prev, forward and play / pause */
+
+#controls{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#controls>a{
+	color: white;
+	text-decoration: none;
+}
+
+
+#controls>a:hover{
+	color: #00b4ff;
+}
+
+
+
+/* 	This contains the progress bar of the songs */
+
+
+#progress{
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 25px;
+	background-color: lightgray;
+	max-height: 10px;
+}
+
+
+#progress>div{
+	width: 50%;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	max-height: 10px;
+	background-color: #00ff2f;
+}
+
+#progress>i{
+	transform: translate(-1px, -1px);
+	z-index: 10;
+}
+
+
+
+
+}
