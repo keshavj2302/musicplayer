@@ -41,7 +41,11 @@
 
 						<a href="#"><li>Trending</li></a>
 
-						<li><input type="search" name="search" placeholder="search your music here"></li>
+						<li id = "search_list">
+							<i class="fas fa-microphone"></i>
+							<input type="search" name="search" placeholder="search your music here">
+							<i class="fas fa-search"></i>
+						</li>
 					</ul>
 				</div>
 
@@ -49,7 +53,10 @@
 				<!-- Search bar, notification bell and profile -->
 
 				<div id = "search_and_profile">
-					<i class="fas fa-bell fa-2x"></i>
+					<span class = "notification">
+						<i class="fas fa-bell fa-2x" id = "bell"></i>
+						<i id = "bar">5</i>
+					</span>
 
 					<img src="images/keshav.jpeg" alt = "profile">
 				</div>
@@ -503,26 +510,71 @@
 					then this music player becomes visible -->
 
 
-				<div id = "bottom_music_player">
-				<div id = "button_and_name">
-					<div id = "name">
-						<img src="images/arijit.gif">
-						<p>Main tera boyfriend</p>
-					</div>
 
-					<div id = "controls">
-						<a href="#"><i class="fas fa-backward fa-2x"></i></a>
-						<a href="#"><i class="far fa-pause-circle fa-2x"></i></a>
-						<a href="#"><i class="fas fa-forward fa-2x"></i></a>
-					</div>
+
+
+
+
+					<div id = "bottom_music_player">
+
+
+						<!-- Contains image and title of the song  -->
+						<div id = "title">
+							
+							<div>
+								<img src="images/raabta-MTB.jpg">
+
+								<p>
+									Main Tera Boy friend<br>Arijit Singh
+								</p>
+
+								
+							</div>
+
+							<a href="#"><i class="fas fa-heart fa-2x"></i></a>
+						</div>
+
+
+
+						<!-- contains all the icons on the control -->
+						<!-- next, prev, shuffle, repeat ans play/pause -->
+
+						<div id = "controls">
+							<div id = "icons">
+								<a href="#"><i class="fas fa-random "></i></a>
+								<a href="#"><i class="fas fa-fast-backward "></i></a>
+								<a href="#"><i class="far fa-pause-circle "></i></a>
+								<a href="#"><i class="fas fa-fast-forward"></i></a>
+								<a href="#"><i class="fas fa-redo "></i></a>
+							</div>
+
+
+							<!-- contains the progress bar -->
+							<div id = "progress">
+								<div>
+									<div></div>
+									<i class="fas fa-circle"></i>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- contains the sound bar -->
+
+						<div id = "sound">
+							
+							<i class="fas fa-volume-up"></i>
+							<div>
+									<div></div>
+									<i class="fas fa-circle"></i>
+							</div>
+						</div>
 				</div>
 
 
-				<div id = "progress">
-					<div></div>
-					<i class="fas fa-circle"></i>
-				</div>
-			</div>
+
+
+
 			</main>
 
 

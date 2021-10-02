@@ -56,7 +56,7 @@ header div{
 }
 
 
-/* 	List containing features and trending
+/* 	List containing features and trending,
 	display as none for devices < 800px */
 
 #lists{
@@ -401,6 +401,7 @@ header div{
 	height: 150px;
 	width: 25%;
 	border-radius: 10px;
+	overflow: hidden;
 }
 
 
@@ -408,6 +409,16 @@ header div{
 	height: 100%;
 	width: 100%;
 	border-radius: 10px;
+	transition: 0.5s ease-in-out;
+}
+
+
+/* 	Changing the size on hovering the image */
+/*	To access the zooming effect */
+
+
+#events div img:hover{
+	transform: scale(2);
 }
 
 
@@ -468,6 +479,11 @@ header div{
 	border-radius: 10px;
 }
 
+/* 	Hovering to add the box-shadow to the songs */
+
+#latest-release-english-container div img:hover{
+	box-shadow: 0 0 12px 1px white;
+}
 
 
 
@@ -536,6 +552,13 @@ header div{
 #one>div{
 	display: flex;
 	justify-content: space-around;
+}
+
+
+/* 	Hover to change the color of heart icon */
+
+#one>div>i:hover{
+	color: red;
 }
 
 
@@ -611,17 +634,21 @@ header div{
 	at the image of the songs this bottom music player pops up */
 
 
+
+
+
+
+
+
 #bottom_music_player{
 	display: none;
-	flex-wrap: wrap;
-	position: fixed;
-	bottom: 0;
-	justify-content: center;
+	border: 2px solid black;
+	height: 90px;
 	background-image: linear-gradient(to right bottom, #5b5d64, #416463 100%);
+	position: fixed;
 	width: 100%;
-	height: 150px;
-	padding: 15px;
-	overflow-y: scroll;
+	bottom: 0;
+	right: 0;
 }
 
 
@@ -629,87 +656,147 @@ header div{
 	display: flex;
 }
 
-#bottom_music_player>div{
+
+
+/*	title 	*/
+
+#title{
+	/*background-color: cyan;	*/
+	width: 55%;
+	display: flex;
+	/*border: 2px solid black;*/
+}
+
+
+/*	Image and title of the bottom music player*/
+
+#title>div{
 	width: 90%;
 	display: flex;
-}
-
-
-#button_and_name{
-	/*border: 2px solid white;*/
-}
-
-#button_and_name>div{
-	width: 45%;
-}
-
-
-/* name contains the image and title */
-
-#name{
-	display: flex;
-	justify-content: space-around;
+	/*border: 2px solid black;*/
+	justify-content: space-evenly;
 	align-items: center;
 }
 
-#name>img{
-	border-radius: 50%;
-	height: 60px;
-	width: 60px;
-}
-
-#name>p{
-	width: 70%;
-	font-size: 20px;
-	font-weight: 500;
+#title>div>img{
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
 }
 
 
-/*	controls contains styling of three
-	 buttons prev, next & play/pause 	*/
+#title>div>p{
+	/*border: 2px solid black;*/
+	color: white;
+	width: 75%;
+}
+
+
+/*	Link to the heart icon 	*/
+
+
+#title>a{
+	color: white;
+}
+
+#title>a:hover{
+	color: red;
+}
+
+
+
+/* 	Heart icon */
+
+
+#title i{
+	width: 10%;
+	/*border: 2px solid black;*/
+	padding: 10px;
+	align-items: end;
+}
+
+
+
+/*	controls	*/
+
 
 #controls{
+	/*background-color: cyan;*/
+	width: 45%;
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/*	icons containing shuffle, back, next, play/pause 	*/
+
+#icons{
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
-#controls>a{
+
+/* 	Link to all the icons */
+
+#icons>a{
 	color: white;
-	text-decoration: none;
 }
 
 
-#controls>a:hover{
-	color: #00b4ff;
+#icons>a:hover{
+	color: #00edfd;
 }
 
 
-/* 	This is the progress bar of the bottom music player */
+
+/*	progress bar 	*/
+
 
 #progress{
+	width: 100%;
 	display: flex;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	border-radius: 25px;
-	background-color: lightgray;
-	max-height: 10px;
+	align-items: center;
+	justify-content: center;
 }
+
+
+/*	outer progress bar */
 
 
 #progress>div{
-	width: 50%;
-	border-top-left-radius: 25px;
-	border-bottom-left-radius: 25px;
-	max-height: 10px;
-	background-color: #00ff2f;
+	display: flex;
+	width: 80%;
+	max-height: 6px;
+	background-color: #d0d0d0;
+	border-radius: 20px;
 }
 
-#progress>i{
-	transform: translate(-1px, -1px);
-	z-index: 10;
+
+/* 	inner progress bar */
+
+
+#progress>div>div{
+	width: 42%;
+	border-radius: 20px 0 0 20px;
+	background-color: #00ffac;
 }
 
+
+#progress>div i{
+	transform: translate(-4px, -4px);
+}
+
+
+/*	Sound bar display as none */
+/* 	Visible for viewport (> 800px) */
+
+#sound{
+	display: none;
+	width: 20%;
+}
 
 
 
@@ -740,12 +827,47 @@ header div{
 		width: 55%;
 	}
 
+
+
+	/*	contains notification and profile */
+
 	#search_and_profile{
 		display: flex;
 		width: 15%;
 		justify-content: space-around;
 		padding-top: 5px;
 	}
+
+/*	bell icon with notification badge*/
+
+.notification{
+	/*background-color: #cccccc;*/
+	display: inline-block;
+	position: relative;
+	/*height: 50px;*/
+	/*width: 50px;*/
+	padding: 4px;
+	border-radius: 50%;
+}
+
+
+#bell{
+	/*background-color: cyan;*/
+}
+
+
+#bar{
+	position: absolute;
+	display: flex;
+	background-color: #004fffe3;
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+	top: 0;
+	right: 0;
+	/*color: white;*/
+
+}
 
 	#toggle{
 		display: none;
@@ -778,6 +900,45 @@ header div{
 
 	#desktop-only-list li{
 		padding-top: 10px;
+		/*border: 2px solid white;*/
+	}
+
+
+
+	/*	Lists that contains search bar 	*/
+	
+	#search_list{
+		background-color: white;
+		/*border: 2px solid red;*/
+		border-radius: 30px;
+		margin-top: 10px;
+		padding: 4px;
+		max-height: 40px;
+	}
+
+
+
+	/* 	Search bar */
+
+
+	#search_list input{
+		border: none;
+		outline: none;
+		/*max-width: 60px;*/
+	}
+
+
+
+	/* 	Microphone and search icon in search bar */
+
+
+	#desktop-only-list li i{
+		color: blue;
+	}
+
+
+	#desktop-only-list li i:hover{
+		color: #0000ffa3;
 	}
 
 
@@ -1037,6 +1198,7 @@ header div{
 	height: 150px;
 	width: 25%;
 	border-radius: 10px;
+	overflow: hidden;
 }
 
 
@@ -1044,6 +1206,15 @@ header div{
 	height: 100%;
 	width: 100%;
 	border-radius: 10px;
+	transition: 0.5s ease-in-out;
+}
+
+
+/* 	Changing the size on hovering the image */
+
+
+#events div img:hover{
+	transform: scale(2);
 }
 
 
@@ -1085,6 +1256,19 @@ header div{
 	height: 120px;
 	display: flex;
 	justify-content: space-around;
+}
+
+
+
+/* 	Hovering to create a shadow effect */
+
+
+#latest-release-english-container>div img{
+	transition: 0.5s ease-in-out;
+}
+
+#latest-release-english-container>div img:hover{
+	box-shadow: 0 0 12px 1px white;
 }
 
 
@@ -1174,18 +1358,22 @@ header div{
 	justify-content: space-around;
 }
 
-#one div img{
-	height:100%;
-	width: 25%;
+
+/*	styling to heart icon of songs */
+
+#one>div>i:hover{
+	color: red;
 }
 
 
+/*	styling to image and title bar */
 
 #song_title{
 	display: flex;
 	width: 70%;
 	justify-content: space-around;
 }
+
 
 #song_title a{
 	color: white;
@@ -1197,14 +1385,16 @@ header div{
 
 
 
-
+/*	setting dimensions of each image of the songs */
 
 #song_title a img{
 	width: 20%;
+	height:100%;
 }
 
 
 
+/*	title of the songs */
 
 #song_title a ul{
 	list-style: none;
@@ -1228,108 +1418,205 @@ header div{
 	at the image of the songs this bottom music player pops up */
 
 
+
+
+
+
 #bottom_music_player{
 	display: none;
-	flex-wrap: wrap;
+	/*border: 2px solid black;*/
+	height: 70px;
 	position: fixed;
-	bottom: 0;
-	justify-content: center;
 	background-image: linear-gradient(to right bottom, #5b5d64, #416463 100%);
 	width: 100%;
-	height: 150px;
-	padding: 15px;
-	overflow-y: scroll;
+	bottom: 0;
+	right: 0;
 }
 
 
-/* 	Show the bottom music player on target */
 
 #bottom_music_player:target{
 	display: flex;
+	flex-direction: row;
 }
 
-#bottom_music_player>div{
-	width: 90%;
+
+/*	title 	*/
+
+#title{
+	/*background-color: cyan;	*/
+	width: 40%;
 	display: flex;
+	/*border: 2px solid black;*/
 }
 
-
-#button_and_name{
-	/*border: 2px solid white;*/
-}
-
-#button_and_name>div{
-	width: 45%;
-}
-
-
-/* 	This sections contains the 
-	name and title of the song 
-	in bottom music player */
-
-#name{
+#title>div{
+	width: 80%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
-#name>img{
-	border-radius: 50%;
-	height: 60px;
-	width: 60px;
-}
 
-#name>p{
-	width: 70%;
-	font-size: 20px;
-	font-weight: 500;
+/*	styles to image */
+
+#title>div>img{
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
 }
 
 
-/*  Conatins the three icon links namely */
-/*  Prev, forward and play / pause */
+/*	Styles to paragraph */
+
+
+#title>div>p{
+	color: white;
+}
+
+
+/*	Link to heart icon */
+
+
+#title>a{
+	color: white;
+}
+
+
+#title>a:hover{
+	color: red;
+}
+
+
+/*	Styling to heart icon */
+
+
+#title i{
+	width: 20%;
+	/*border: 2px solid black;*/
+	padding: 10px;
+	align-items: end;
+}
+
+
+
+/*	controls	*/
+
 
 #controls{
+	/*background-color: cyan;*/
+	width: 40%;
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/* 	Contains all the icons shuffle, prev, next  */
+
+#icons{
+	width: 60%;
+	display: flex;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
-#controls>a{
+
+/*	link to all the icon */
+
+#icons>a{
 	color: white;
-	text-decoration: none;
 }
 
 
-#controls>a:hover{
-	color: #00b4ff;
+#icons>a:hover{
+	color: #00edfd;
 }
 
 
-/* 	This contains the progress bar of the songs */
+
+/*	progress bar */
 
 #progress{
+	width: 80%;
 	display: flex;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	border-radius: 25px;
-	background-color: lightgray;
-	max-height: 10px;
+	align-items: center;
+	justify-content: center;
 }
+
+
+/*	Outer portion of progress bar */
 
 
 #progress>div{
-	width: 50%;
-	border-top-left-radius: 25px;
-	border-bottom-left-radius: 25px;
-	max-height: 10px;
-	background-color: #00ff2f;
+	display: flex;
+	width: 80%;
+	max-height: 6px;
+	background-color: #d0d0d0;
+	border-radius: 20px;
 }
 
-#progress>i{
-	transform: translate(-1px, -1px);
-	z-index: 10;
+
+/*	inner portion of progress bar */
+
+
+#progress>div>div{
+	width: 42%;
+	border-radius: 20px 0 0 20px;
+	background-color: #00ffac;
 }
+
+
+#progress>div i{
+	transform: translate(-4px, -4px);
+}
+
+
+/*	sound bar */
+
+#sound{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	/*background-color: cyan;*/
+	width: 20%;
+}
+
+
+/*	sound icon */
+
+#sound>i{
+	color: white;
+}
+
+
+/* This is the progress bar of the sound */
+/*	outer progress bar */
+
+#sound>div{
+	display: flex;
+	width: 80%;
+	max-height: 6px;
+	background-color: #d0d0d0;
+	border-radius: 20px;
+}
+
+
+/*	inner progress bar */
+
+
+#sound>div>div{
+	width: 42%;
+	border-radius: 20px 0 0 20px;
+	background-color: #00ffac;
+}
+
+#sound>div i{
+	transform: translate(-4px, -4px);
+}
+
+
+
 
 
 
